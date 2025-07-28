@@ -1,9 +1,4 @@
-HipyTelegramBotAPI
-python-dotenv
+pyTelegramBotAPI
 apscheduler
-aiogram
-celery
-redis
-sqlalchemy
 psycopg2-binary
-psycopg2
+python-dotenv
