@@ -1,4 +1,4 @@
-pyTelegramBotAPI
+HipyTelegramBotAPI
 python-dotenv
 apscheduler
 aiogram
