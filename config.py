@@ -6,9 +6,8 @@ PAYMENT_ALERTS_CHANNEL = -1002719649863
 SUBSCRIBE_CHANNEL_ID = -1002804590079
 SUPPORT_USERNAME = "AboAlmajd18"
 
-# PostgreSQL Connection Settings
-DB_HOST = "dpg-d23vame3jp1c73ae9650-a"
+DB_HOST = "dpg-d23vame3jp1c73ae9650-a.frankfurt-postgres.render.com"
 DB_PORT = 5432
 DB_NAME = "dbmaster_yehk"
 DB_USER = "dbmaster_yehk_user"
-DB_PASSWORD = "FL6muzBXyf2EpnPQmYrHMTI002tce600"
+DB_PASSWORD = "FL6nmuzBXyf2EpnPQmYrHMTI0C2tc6Q0"
