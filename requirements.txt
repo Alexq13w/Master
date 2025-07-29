@@ -5,4 +5,4 @@ aiogram==3.21.0
 celery==5.5.3
 redis==6.2.0
 sqlalchemy==2.0.42
-psycopg-binary==3.2.9
+psycopg2-binary==2.9.9
