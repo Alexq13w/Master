@@ -1,0 +1,9 @@
+pyTelegramBotAPI
+python-dotenv
+apscheduler
+aiogram
+celery
+redis
+sqlalchemy
+psycopg2-binary
+psycopg2
