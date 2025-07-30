@@ -1261,8 +1261,6 @@ def process_search_by_id(message):
         markup.row(
             types.InlineKeyboardButton("✅ قبول", callback_data=f"admin_approve_{req[0]}"),
             types.InlineKeyboardButton("❌ رفض", callback_data=f"admin_reject_{req[0]}"))
-        )
-        
         try:
             if req[5]:
                 bot.send_photo(
