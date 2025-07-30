@@ -1,5 +1,3 @@
-[file name]: main.p
-[file content begin]
 import telebot
 from telebot import types
 import random
@@ -2161,6 +2159,6 @@ def index():
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 10000))
     bot.remove_webhook()
-    bot.set_webhook(url='https://YOUR-RENDER-SERVICE-NAME.onrender.com/' + TOKEN)
+    bot.set_webhook(url='https://master-gfh3.onrender.com/' + TOKEN)
     app.run(host='0.0.0.0', port=PORT)
 [file content end]
