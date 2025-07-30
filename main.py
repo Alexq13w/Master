@@ -923,7 +923,7 @@ def show_pending_requests(chat_id, page=0, filters=None):
                 types.InlineKeyboardButton(f"👁️ تفاصيل {req[0]}", callback_data=f"admin_details_{req[0]}")
             )
         
-        filter_btn = types.InlineKeyboardButton("🔍 تصفية", callback_data="filter_requests"))
+        filter_btn = types.InlineKeyboardButton("🔍 تصفية", callback_data="filter_requests")
         markup.add(filter_btn)
         
         alerts_enabled = get_setting('admin_alerts_enabled') == '1'
