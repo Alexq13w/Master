@@ -1973,7 +1973,7 @@ def process_payment_receipt(message):
         conn = get_db_connection()
         try:
             with conn.cursor() as cursor:
-                cursor.execute(
+                )cursor.execute
                     "INSERT INTO pending_requests (user_id, ticket_type, payment_method, request_time, receipt_number, quantity) "
                     "VALUES (%s, %s, %s, %s, %s, %s) RETURNING id",
                     (user_id, user_data[user_id]['ticket_type'], payment_method, request_time, user_data[user_id]['receipt_number'], user_data[user_id]['quantity'])
