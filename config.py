@@ -11,4 +11,4 @@ DB_HOST = "dpg-d23vame3jp1c73ae9650-a"
 DB_PORT = 5432
 DB_NAME = "dbmaster_yehk"
 DB_USER = "dbmaster_yehk_user"
-DB_PASSWORD = "FL6muzBXyf2EpnPQmYrHMTI002tce600"
+DB_PASSWORD = "FL6nmuzBXyf2EpnPQmYrHMTI0C2tc6Q0"
