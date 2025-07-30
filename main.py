@@ -1063,9 +1063,10 @@ def admin_reject_request(call):
             bot.answer_callback_query(call.id, f"❌ تم رفض الطلب #{request_id}")
         except Exception as e:
             bot.send_message(
-                call.message.chat.id,
-                f"❌ حدث خطأ أثناء معالجة الطلب",
-                reply_markup=admin_markup()
+    call.message.chat.id,
+    f"❌ حدث خطأ أثناء معالجة الطلب",
+    reply_markup=admin_markup()
+            )
             bot.answer_callback_query(call.id, f"❌ حدث خطأ أثناء المعالجة")
         
         show_pending_requests(call.message.chat.id)
