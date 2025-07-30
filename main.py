@@ -1066,7 +1066,6 @@ def admin_reject_request(call):
                 call.message.chat.id,
                 f"❌ حدث خطأ أثناء معالجة الطلب",
                 reply_markup=admin_markup()
-            )
             bot.answer_callback_query(call.id, f"❌ حدث خطأ أثناء المعالجة")
         
         show_pending_requests(call.message.chat.id)
