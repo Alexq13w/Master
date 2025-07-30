@@ -959,27 +959,26 @@ def show_request_details(call):
             postgreSQL_pool.putconn(conn)
         
         if not req:
-            bot.answer_callback_query(call.id, "❌ الطلب غير موجود")
-            return
-        
-        details = (
-            f"📋 تفاصيل الطلب #{req[0]}\n\n"
-            f"👤 المستخدم: {req[1]}\n"
-            f"🎫 النوع: {req[2]}\n"
-            f"💳 الدفع: {req[3]}\n"
-            f"🔢 الكمية: {req[6]}\n"
-            f"💸 الإجمالي: {req[6] * 5000:,} ليرة سورية\n"
-            f"🕒 التاريخ: {req[4]}\n"
-            f"📌 الحالة: {req[5]}"
-        )
-        
-        markup = types.InlineKeyboardMarkup()
-        markup.row(
-            types.InlineKeyboardButton("✅ قبول", callback_data=f"admin_approve_{req[0]}"),
-            types.InlineKeyboardButton("❌ رفض", callback_data=f"admin_reject_{req[0]}"))
-        )
-        
-        try:
+    bot.answer_callback_query(call.id, "❌ الطلب غير موجود")
+    return
+
+details = (
+    f"📋 تفاصيل الطلب #{req[0]}\n\n"
+    f"👤 المستخدم: {req[1]}\n"
+    f"🎫 النوع: {req[2]}\n"
+    f"💳 الدفع: {req[3]}\n"
+    f"🔢 الكمية: {req[6]}\n"
+    f"💸 الإجمالي: {req[6] * 5000:,} ليرة سورية\n"
+    f"🕒 التاريخ: {req[4]}\n"
+    f"📌 الحالة: {req[5]}"
+)
+
+markup = types.InlineKeyboardMarkup()
+markup.row(
+    types.InlineKeyboardButton("✅ قبول", callback_data=f"admin_approve_{req[0]}"),
+    types.InlineKeyboardButton("❌ رفض", callback_data=f"admin_reject_{req[0]}")  # تم إصلاح السطر هنا
+)
+try:
             if req[5]:
                 bot.send_photo(
                     call.message.chat.id,
