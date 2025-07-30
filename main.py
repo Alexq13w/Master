@@ -1163,9 +1163,9 @@ def process_search_by_id(message):
         )
         
         markup = types.InlineKeyboardMarkup()
-        markup.row(
-            types.InlineKeyboardButton("✅ قبول", callback_data=f"admin_approve_{req[0]}"),
-            types.InlineKeyboardButton("❌ رفض", callback_data=f"admin_reject_{req[0]}"))
+markup.row(
+    types.InlineKeyboardButton("✅ قبول", callback_data=f"admin_approve_{req[0]}"),
+    types.InlineKeyboardButton("❌ رفض", callback_data=f"admin_reject_{req[0]}")
         )
         
         try:
