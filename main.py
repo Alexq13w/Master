@@ -1,3 +1,9 @@
+if __name__ == '__main__':
+    scheduler.start()
+    PORT = int(os.environ.get('PORT', 10000))
+    bot.remove_webhook()
+    bot.set_webhook(url='https://master-gfh3.onrender.com/' + TOKEN)
+    app.run(host='0.0.0.0', port=PORT)
 import telebot
 from telebot import types
 import random
