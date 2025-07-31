@@ -1,5 +1,5 @@
 if __name__ == '__main__':
-    scheduler.start()
+    APScheduler.start()
     PORT = int(os.environ.get('PORT', 10000))
     bot.remove_webhook()
     bot.set_webhook(url='https://master-gfh3.onrender.com/' + TOKEN)
