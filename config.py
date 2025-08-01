@@ -12,3 +12,4 @@ DB_PORT = 5432
 DB_NAME = "dbmaster_yehk"
 DB_USER = "dbmaster_yehk_user"
 DB_PASSWORD = "FL6nmuzBXyf2EpnPQmYrHMTI0C2tc6Q0"
+DATABASE_URL = "postgresql://dbmaster_yehk_user:FL6nmuzBXyf2EpnPQmYrHMTI0C2tc6Q0@dpg-d23vame3jp1c73ae9650-a.oregon-postgres.render.com:5432/dbmaster_yehk"
