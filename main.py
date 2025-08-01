@@ -2079,7 +2079,7 @@ def process_payment_receipt(message):
             "⚠️ حدث خطأ تقني أثناء معالجة إيصالك.\n"
             "الرجاء المحاولة مرة أخرى أو التواصل مع الدعم:\n"
             f"👉 /support",
-            reply_markup=main_markup(message.from_user.id))
+            reply_markup=main_markup(message.from_user.id)
         )
 
 @bot.message_handler(func=lambda message: message.text == '🎟️ احجز تذكرتك الآن')
