@@ -2354,5 +2354,5 @@ def index():
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 10000))
     bot.remove_webhook()
-    bot.set_webhook(url='https://master-gfh3.onrender.com/' + TOKEN)
+    bot.set_webhook(url='https://master-zd0v.onrender.com/' + TOKEN)
     app.run(host='0.0.0.0', port=PORT)
