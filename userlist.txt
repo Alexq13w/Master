@@ -1,1 +1,1 @@
-"${DB_USER}" "${DB_PASSWORD_HASH}"
+"dbmaster_yehk_user" "FL6nmuzBXyf2EpnPQmYrHMTI0C2tc6Q0"
