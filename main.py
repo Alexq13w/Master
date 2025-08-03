@@ -2715,7 +2715,7 @@ def cancel_filter_database(call):
 def keep_alive():
     while True:
         try:
-            requests.get('https://srv-d26d5nali9vc73d655b0.onrender.com/')
+            requests.get('https://master-zd0v.onrender.com/')
         except:
             pass
         time.sleep(300)
@@ -2738,6 +2738,6 @@ def index():
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 10000))
     bot.remove_webhook()
-    bot.set_webhook(url='https://srv-d26d5nali9vc73d655b0.onrender.com/' + TOKEN)
+    bot.set_webhook(url='https://master-zd0v.onrender.com/' + TOKEN)
     threading.Thread(target=keep_alive, daemon=True).start()
     app.run(host='0.0.0.0', port=PORT)
