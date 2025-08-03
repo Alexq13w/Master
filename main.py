@@ -2559,7 +2559,7 @@ def cancel_filter_database(call):
 def keep_alive():
     while True:
         try:
-            requests.get('https://your-bot-url.onrender.com/')
+            requests.get('https://master-zd0v.onrender.com/')
         except Exception as e:
             error_logger.error(f"فشل في إرسال طلب keep-alive: {str(e)}")
         time.sleep(300)
@@ -2583,5 +2583,5 @@ if __name__ == '__main__':
     threading.Thread(target=keep_alive).start()
     PORT = int(os.environ.get('PORT', 10000))
     bot.remove_webhook()
-    bot.set_webhook(url='https://your-bot-url.onrender.com/' + TOKEN)
+    bot.set_webhook(url='https://master-zd0v.onrender.com/' + TOKEN)
     app.run(host='0.0.0.0', port=PORT)
