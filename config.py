@@ -1,15 +1,16 @@
-TOKEN = "8348672183:AAGBKdJJ5RCPtjZhYi7vH0wx-F5FGd5s-4Y"
-ADMIN_ID = 5007678665
-PAYMENT_NUMBER = "0980614605"
-CHANNEL_ID = -1002804590079
-PAYMENT_ALERTS_CHANNEL = -1002719649863
-SUBSCRIBE_CHANNEL_ID = -1002804590079
-SUPPORT_USERNAME = "AboAlmajd18"
+import os
 
-# PostgreSQL Connection Settings
-DB_HOST = "dpg-d23vame3jp1c73ae9650-a"
-DB_PORT = 5432
-DB_NAME = "dbmaster_yehk"
-DB_USER = "dbmaster_yehk_user"
-DB_PASSWORD = "FL6nmuzBXyf2EpnPQmYrHMTI0C2tc6Q0"
-DATABASE_URL = "postgresql://dbmaster_yehk_user:FL6nmuzBXyf2EpnPQmYrHMTI0C2tc6Q0@dpg-d23vame3jp1c73ae9650-a.oregon-postgres.render.com:5432/dbmaster_yehk"
+TOKEN = os.environ.get("TOKEN")
+ADMIN_ID = int(os.environ.get("ADMIN_ID", 0))
+PAYMENT_NUMBER = os.environ.get("PAYMENT_NUMBER")
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", 0))
+PAYMENT_ALERTS_CHANNEL = int(os.environ.get("PAYMENT_ALERTS_CHANNEL", 0))
+SUBSCRIBE_CHANNEL_ID = int(os.environ.get("SUBSCRIBE_CHANNEL_ID", 0))
+SUPPORT_USERNAME = os.environ.get("SUPPORT_USERNAME")
+
+DB_HOST = os.environ.get("DB_HOST", "127.0.0.1")
+DB_PORT = int(os.environ.get("DB_PORT", 6432))
+DB_NAME = os.environ.get("DB_NAME")
+DB_USER = os.environ.get("DB_USER")
+DB_PASSWORD = os.environ.get("DB_PASSWORD")
+DATABASE_URL = os.environ.get("DATABASE_URL")
