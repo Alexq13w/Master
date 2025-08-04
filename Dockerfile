@@ -1,7 +1,8 @@
-FROM bitnami/pgbouncer:latest
+FROM postgres:14
 
-ENV POSTGRESQL_USER="dbmaster_yehk_user"
-ENV POSTGRESQL_PASSWORD="FL6nmuzBXyf2EpnPQmYrHMTI0C2tc6Q0"
+RUN apt-get update && apt-get install -y pgbouncer
 
-COPY pgbouncer.ini /opt/bitnami/pgbouncer/conf/
-COPY userlist.txt /opt/bitnami/pgbouncer/conf/
+COPY pgbouncer.ini /etc/pgbouncer/
+COPY userlist.txt /etc/pgbouncer/
+
+CMD ["sh", "-c", "pgbouncer -d /etc/pgbouncer/pgbouncer.ini"]
