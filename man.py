@@ -2486,7 +2486,7 @@ def admin_approve_request(call):
                     f"✅ تم حجز {quantity} تذكرة للسحب {'اليومي' if ticket_type == 'يومي' else 'الأسبوعي'} القادم:\n"
                     f"{tickets_info}\n\n"
                     f"📅 تاريخ الشراء: {purchase_date}",
-                    reply_markup=main_markup(user_id))
+                    reply_markup=main_markup(user_id)
                 )
             except Exception as e:
                 error_logger.error(f"خطأ أثناء إرسال رسالة الموافقة: {e}")
@@ -2576,7 +2576,7 @@ def cancel_filter_database(call):
 def keep_alive():
     while True:
         try:
-            requests.get('https://srv-d26d5nali9vc73d655b0.onrender.com/')
+            requests.get('https://master-zd0v.onrender.com/')
         except:
             pass
         time.sleep(300)
@@ -2599,6 +2599,6 @@ def index():
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 10000))
     bot.remove_webhook()
-    bot.set_webhook(url='https://srv-d26d5nali9vc73d655b0.onrender.com/' + TOKEN)
+    bot.set_webhook(url='https://master-zd0v.onrender.com/' + TOKEN)
     threading.Thread(target=keep_alive, daemon=True).start()
     app.run(host='0.0.0.0', port=PORT)
