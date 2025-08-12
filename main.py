@@ -2694,6 +2694,7 @@ def handle_buy_ticket(message):
                 user_id,
                 "⚠️ لديك عملية قيد التنفيذ بالفعل. يرجى إكمالها أو إلغاؤها أولاً.",
                 reply_markup=main_markup(user_id)
+            ) 
             return
         
         user_data[user_id] = {'state': 'buying_ticket', 'timestamp': time.time()}
