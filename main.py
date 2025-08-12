@@ -2690,11 +2690,11 @@ def handle_buy_ticket(message):
         user_id = message.from_user.id
         
         if not start_ticket_process(user_id):
-            bot.send_message(
-                user_id,
-                "⚠️ لديك عملية قيد التنفيذ بالفعل. يرجى إكمالها أو إلغاؤها أولاً.",
-                reply_markup=main_markup(user_id)
-            return
+    bot.send_message(
+        message.chat.id,
+        "⚠️ لديك عملية قيد التنفيذ، الرجاء إكمالها أو إلغاؤها قبل البدء بجديدة."
+    )
+    return
         
         user_data[user_id] = {'state': 'buying_ticket', 'timestamp': time.time()}
         buy_ticket_step(message)
