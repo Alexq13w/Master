@@ -2878,7 +2878,7 @@ def admin_approve_request(call):
                     f"✅ تم حجز {quantity} تذكرة للسحب {'اليومي' if ticket_type == 'يومي' else 'الأسبوعي' if ticket_type == 'أسبوعي' else 'الشهري'} القادم:\n"
                     f"{tickets_info}\n\n"
                     f"📅 تاريخ الشراء: {purchase_date}",
-                    reply_markup=main_markup(user_id))
+                    reply_markup=main_markup(user_id)
                 )
             except Exception as e:
                 error_logger.error(f"خطأ أثناء إرسال رسالة الموافقة: {e}")
